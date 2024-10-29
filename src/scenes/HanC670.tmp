@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0l34cjb53bu7"]
+
+[ext_resource type="Script" path="res://src/hand.gd" id="1_4vf27"]
+[ext_resource type="PackedScene" uid="uid://ccrnwaq2pyl0p" path="res://src/scenes/cards/BishopCard.tscn" id="2_su8ws"]
+[ext_resource type="PackedScene" uid="uid://c8i14mojew2fk" path="res://src/scenes/cards/PawnCard.tscn" id="3_cm8jx"]
+[ext_resource type="PackedScene" uid="uid://c7ys4kb3g6o7q" path="res://src/scenes/cards/QueenCard.tscn" id="4_0kcgl"]
+[ext_resource type="PackedScene" uid="uid://c3mqf56e778hh" path="res://src/scenes/cards/RookCard.tscn" id="5_8uv8x"]
+
+[node name="Hand" type="Node2D"]
+position = Vector2(480, 500)
+script = ExtResource("1_4vf27")
+max_arc_angle = 30.0
+min_spacing = null
+max_spacing = null
+
+[node name="BishopCard" parent="." instance=ExtResource("2_su8ws")]
+position = Vector2(-25.8819, -3.40742)
+
+[node name="PawnCard" parent="." instance=ExtResource("3_cm8jx")]
+
+[node name="QueenCard" parent="." instance=ExtResource("4_0kcgl")]
+position = Vector2(25.8819, -3.40742)
+
+[node name="RookCard" parent="." instance=ExtResource("5_8uv8x")]

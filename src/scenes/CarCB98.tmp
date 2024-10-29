@@ -1,0 +1,290 @@
+[gd_scene load_steps=15 format=3 uid="uid://biqsjve7g1565"]
+
+[ext_resource type="Script" path="res://src/scripts/card.gd" id="1_8872n"]
+[ext_resource type="Texture2D" uid="uid://s1hi6pi235qx" path="res://assets/sprites/cardFrontTemplate.png" id="2_qe22r"]
+[ext_resource type="Texture2D" uid="uid://wo0vny6jxhqg" path="res://assets/sprites/manaOrb.png" id="3_c75e5"]
+[ext_resource type="FontFile" uid="uid://7ik5o83s7r4e" path="res://assets/fonts/uni05/uni05_53.ttf" id="3_tbh35"]
+[ext_resource type="FontFile" uid="uid://d1bk757kj7gwu" path="res://assets/fonts/uni05/uni05_64.ttf" id="5_8tlts"]
+[ext_resource type="Texture2D" uid="uid://c6evbo8x0rdox" path="res://assets/sprites/chessPieces/king.png" id="6_3aqco"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_axmop"]
+font = ExtResource("3_tbh35")
+
+[sub_resource type="LabelSettings" id="LabelSettings_fk1yj"]
+font = ExtResource("5_8tlts")
+font_size = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_kuor1"]
+font = ExtResource("3_tbh35")
+font_size = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tswbw"]
+size = Vector2(100, 150)
+
+[sub_resource type="Animation" id="Animation_1lktg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardName:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, -62)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cardCost:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-37, -62)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cardArt:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-50, -75)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cardDescription:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-43, 40)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cardBack:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bo04s"]
+resource_name = "select"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cardName:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-37, -62), Vector2(-37, -87)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cardCost:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-37, -62), Vector2(-37, -87)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cardArt:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-50, -75), Vector2(-50, -100)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cardDescription:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-43, 40), Vector2(-43, 15)]
+}
+
+[sub_resource type="Animation" id="Animation_j2bgr"]
+resource_name = "deselect"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("cardBack:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -25), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("cardName:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-37, -87), Vector2(-37, -62)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("cardCost:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-37, -87), Vector2(-37, -62)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("cardArt:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-50, -100), Vector2(-50, -75)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("cardDescription:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-43, 15), Vector2(-43, 40)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drc27"]
+_data = {
+"RESET": SubResource("Animation_1lktg"),
+"deselect": SubResource("Animation_j2bgr"),
+"select": SubResource("Animation_bo04s")
+}
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_8872n")
+metadata/_edit_use_anchors_ = true
+
+[node name="cardBack" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qe22r")
+
+[node name="cardName" type="Node2D" parent="."]
+position = Vector2(-37, -62)
+
+[node name="nameLabel" type="Label" parent="cardName"]
+offset_left = -7.0
+offset_top = 78.0
+offset_right = 87.0
+offset_bottom = 101.0
+text = "Card Name"
+label_settings = SubResource("LabelSettings_axmop")
+metadata/_edit_use_anchors_ = true
+
+[node name="cardCost" type="Node2D" parent="."]
+position = Vector2(-37, -62)
+
+[node name="costSprite" type="Sprite2D" parent="cardCost"]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_c75e5")
+
+[node name="costLabel" type="Label" parent="cardCost"]
+offset_left = -5.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 9.0
+text = "1"
+label_settings = SubResource("LabelSettings_fk1yj")
+metadata/_edit_use_anchors_ = true
+
+[node name="cardArt" type="Node2D" parent="."]
+position = Vector2(-50, -75)
+
+[node name="cardArtSprite" type="Sprite2D" parent="cardArt"]
+position = Vector2(50, 47)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_3aqco")
+
+[node name="cardDescription" type="Node2D" parent="."]
+position = Vector2(-43, 40)
+
+[node name="descriptionLabel" type="Label" parent="cardDescription"]
+offset_top = -1.0
+offset_right = 87.0
+offset_bottom = 33.0
+text = "Card Description"
+label_settings = SubResource("LabelSettings_kuor1")
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="cardArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cardArea"]
+shape = SubResource("RectangleShape2D_tswbw")
+
+[node name="selectAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_drc27")
+}
+
+[connection signal="input_event" from="cardArea" to="." method="_on_card_area_input_event"]
+[connection signal="mouse_entered" from="cardArea" to="." method="_on_card_area_mouse_entered"]
+[connection signal="mouse_exited" from="cardArea" to="." method="_on_card_area_mouse_exited"]

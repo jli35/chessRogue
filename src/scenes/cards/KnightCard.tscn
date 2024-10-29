@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://chpvonlh8oha7"]
+
+[ext_resource type="PackedScene" uid="uid://biqsjve7g1565" path="res://src/scenes/Card.tscn" id="1_iij0y"]
+[ext_resource type="Texture2D" uid="uid://dwa1hi6q7r1ml" path="res://assets/sprites/chessPieces/knight.png" id="2_ml48t"]
+
+[node name="KnightCard" type="Node2D"]
+
+[node name="Card" parent="." node_paths=PackedStringArray("cardArt") instance=ExtResource("1_iij0y")]
+cardName = "Knight"
+cardCost = 2
+cardDescription = "Attacks sqaures at the end of an L-shape"
+cardArt = NodePath("../CardImage")
+
+[node name="CardImage" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_ml48t")

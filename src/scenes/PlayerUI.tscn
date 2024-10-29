@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://13xmg61e8dvj"]
+
+[ext_resource type="Script" path="res://src/scripts/PlayerUI.gd" id="1_a18cv"]
+[ext_resource type="PackedScene" uid="uid://d0l34cjb53bu7" path="res://src/scenes/Hand.tscn" id="2_0utqh"]
+
+[node name="playerUI" type="Node2D"]
+script = ExtResource("1_a18cv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="makeBishop" type="Button" parent="CanvasLayer"]
+offset_left = 25.0
+offset_top = 14.0
+offset_right = 133.0
+offset_bottom = 45.0
+text = "Make Bishop
+"
+
+[node name="make Knight" type="Button" parent="CanvasLayer"]
+offset_left = 137.0
+offset_top = 118.0
+offset_right = 242.0
+offset_bottom = 149.0
+text = "Make Knight
+"
+
+[node name="Hand" parent="CanvasLayer" instance=ExtResource("2_0utqh")]
+position = Vector2(480, 1440)
+hand_radius = 1000
+
+[connection signal="pressed" from="CanvasLayer/makeBishop" to="." method="_on_make_bishop_pressed"]
+[connection signal="pressed" from="CanvasLayer/make Knight" to="." method="_on_make_knight_pressed"]

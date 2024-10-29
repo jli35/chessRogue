@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3mqf56e778hh"]
+
+[ext_resource type="PackedScene" uid="uid://biqsjve7g1565" path="res://src/scenes/Card.tscn" id="1_is3dm"]
+[ext_resource type="Texture2D" uid="uid://ca318aqpckvw3" path="res://assets/sprites/chessPieces/rook.png" id="2_8ff1u"]
+
+[node name="RookCard" type="Node2D"]
+
+[node name="Card" parent="." node_paths=PackedStringArray("cardArt") instance=ExtResource("1_is3dm")]
+cardName = "Rook"
+cardCost = 4
+cardDescription = "Attacks along vertical and horizontal lines"
+cardArt = NodePath("../CardImage")
+
+[node name="CardImage" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_8ff1u")

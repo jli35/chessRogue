@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8i14mojew2fk"]
+
+[ext_resource type="PackedScene" uid="uid://biqsjve7g1565" path="res://src/scenes/Card.tscn" id="1_84l02"]
+[ext_resource type="Texture2D" uid="uid://cq07lk11psbxg" path="res://assets/sprites/chessPieces/pawn.png" id="2_3qcl8"]
+
+[node name="PawnCard" type="Node2D"]
+
+[node name="Card" parent="." node_paths=PackedStringArray("cardArt") instance=ExtResource("1_84l02")]
+cardName = "Pawn"
+cardDescription = "Attacks either squares diagonally in front"
+cardArt = NodePath("../CardImage")
+
+[node name="CardImage" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_3qcl8")

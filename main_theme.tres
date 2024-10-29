@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://2beatt5k6o5j"]
+
+[ext_resource type="FontFile" uid="uid://7ik5o83s7r4e" path="res://assets/fonts/uni05/uni05_53.ttf" id="1_fee7l"]
+
+[resource]
+default_font = ExtResource("1_fee7l")
+default_font_size = 8
