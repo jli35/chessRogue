@@ -1,5 +1,5 @@
 @tool
-class_name Card extends Node2D
+extends Node2D
 
 signal mouse_entered()
 signal mouse_exited()

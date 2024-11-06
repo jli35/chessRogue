@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Card" load_steps=2 format=3 uid="uid://ctksl8mifsn3p"]
+
+[ext_resource type="Script" path="res://src/custom_resources/card.gd" id="1_fwlug"]
+
+[resource]
+script = ExtResource("1_fwlug")
+id = "fire_fireball"
+type = 0
+target = 1

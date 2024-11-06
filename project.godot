@@ -18,6 +18,7 @@ config/icon="res://assets/sprites/chessPieces/king.png"
 [autoload]
 
 GameState="*res://src/gameState.gd"
+Events="*res://src/global/events.gd"
 
 [display]
 
@@ -44,6 +45,7 @@ right_mouse={
 
 2d_physics/layer_1="card_target_selector"
 2d_physics/layer_2="card_drop_area"
+2d_physics/layer_3="enemies"
 
 [rendering]
 
